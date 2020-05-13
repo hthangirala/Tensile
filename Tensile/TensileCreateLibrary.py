@@ -149,7 +149,7 @@ def buildSourceCodeObjectFile(CxxCompiler, outputPath, kernelFile):
 
       hipFlags += ['-I', outputPath, '-fPIC']
 
-      compileArgs = [which('hcc')] + hipFlags + [kernelFile, '-c', '-o', objectFilepath]
+      compileArgs = [which('hipcc')] + hipFlags + [kernelFile, '-c', '-o', objectFilepath]
 
       linkArgs = [globalParameters['AssemblerPath']] + hipLinkFlags + archFlags + [objectFilepath, '-shared', '-o', soFilepath]
       extractArgs = [globalParameters['ExtractKernelPath'], '-i', os.path.join(buildPath,soFilename)]

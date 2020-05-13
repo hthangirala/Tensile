@@ -1,5 +1,5 @@
 if(CMAKE_CXX_COMPILER MATCHES ".*/hcc$")
-    set(COMPILER "hcc")
+    set(COMPILER "hipcc")
 else()
     set(COMPILER "hipcc")
     set(CODE_OBJECT_VERSION "V3")
